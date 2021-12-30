@@ -51,9 +51,10 @@ public class LatestEventhubJsonIngetionApplication {
         cell.setCity("delhi");
         cell1.setPhNo("9999999");
         
-        
+       // System.out.println(cell.toJSON() + cell1.toJSON());
 	//List<EventData> allEvents = Arrays.asList(new EventData("test1111"), new EventData("message111"));
-	List<EventData> allEvents = Arrays.asList(new EventData(cell.toString()), new EventData(cell1.toString()));
+	//List<EventData> allEvents = Arrays.asList(new EventData(cell.toString()), new EventData(cell1.toString()));
+	List<EventData> allEvents = Arrays.asList(new EventData(cell.toJSON()), new EventData(cell1.toJSON()));
         // create a batch
         EventDataBatch eventDataBatch = producer.createBatch();
      for (EventData eventData : allEvents) {
@@ -75,5 +76,8 @@ public class LatestEventhubJsonIngetionApplication {
         }
         producer.close();    
     }
+    
+    
+    
 
 }

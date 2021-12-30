@@ -23,7 +23,9 @@ public class CellularInfo {
 			return "CellularInfo [city=" + city + ", phNo=" + phNo + "]";
 		}
 
-
+		public String toJSON() {
+			return "{\"phNo\":\"" + phNo + "\",\"city\": \"" +city+ "\"}";
+		}
 	
 
 
