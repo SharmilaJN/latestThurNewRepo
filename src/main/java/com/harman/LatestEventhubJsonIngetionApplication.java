@@ -19,6 +19,7 @@ public class LatestEventhubJsonIngetionApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LatestEventhubJsonIngetionApplication.class, args);
+		publishEvents();
 	}
 	
 
