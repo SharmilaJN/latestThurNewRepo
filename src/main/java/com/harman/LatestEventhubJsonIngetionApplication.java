@@ -11,6 +11,7 @@ import com.azure.messaging.eventhubs.EventData;
 import com.azure.messaging.eventhubs.EventDataBatch;
 import com.azure.messaging.eventhubs.EventHubClientBuilder;
 import com.azure.messaging.eventhubs.EventHubProducerClient;
+import com.harman.dto.CellularInfo;
 
 @SpringBootApplication
 public class LatestEventhubJsonIngetionApplication {
@@ -19,7 +20,7 @@ public class LatestEventhubJsonIngetionApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LatestEventhubJsonIngetionApplication.class, args);
-		publishEvents();
+		publishEvents();  
 	}
 	
 
@@ -42,8 +43,11 @@ public class LatestEventhubJsonIngetionApplication {
             .buildProducerClient();
 
         // sample events in an array
+        CellularInfo cell = new CellularInfo();
         
-	List<EventData> allEvents = Arrays.asList(new EventData("test1111"), new EventData("message111"));
+        
+	//List<EventData> allEvents = Arrays.asList(new EventData("test1111"), new EventData("message111"));
+	List<EventData> allEvents = Arrays.asList(new EventData(cell.toString()), new EventData("message111"));
         // create a batch
         EventDataBatch eventDataBatch = producer.createBatch();
      for (EventData eventData : allEvents) {
