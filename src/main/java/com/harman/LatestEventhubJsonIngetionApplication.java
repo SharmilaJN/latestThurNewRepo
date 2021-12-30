@@ -44,10 +44,12 @@ public class LatestEventhubJsonIngetionApplication {
 
         // sample events in an array
         CellularInfo cell = new CellularInfo();
+        cell.setCity("punenew");
+        cell.equals("12345678");
         
         
 	//List<EventData> allEvents = Arrays.asList(new EventData("test1111"), new EventData("message111"));
-	List<EventData> allEvents = Arrays.asList(new EventData(cell.toString()), new EventData("message111"));
+	List<EventData> allEvents = Arrays.asList(new EventData(cell.toString()), new EventData("lateststring"));
         // create a batch
         EventDataBatch eventDataBatch = producer.createBatch();
      for (EventData eventData : allEvents) {
