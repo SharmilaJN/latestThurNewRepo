@@ -45,12 +45,12 @@ public class LatestEventhubJsonIngetionApplication {
 
         // sample events in an array
         CellularInfo cell = new CellularInfo();
-        cell.setCity("punenew1111jsonfriday22");
-        cell.setPhNo("1222");
+        cell.setCity("punenew1111jsonfriday22@4pm");
+        cell.setPhNo("1222@4pm");
         
         CellularInfo cell1 = new CellularInfo();
-        cell1.setCity("delhi1111jsonfriday22");
-        cell1.setPhNo("9922");
+        cell1.setCity("delhi1111jsonfriday22@4pm");
+        cell1.setPhNo("992224pm");
         
        // System.out.println(cell.toJSON() + cell1.toJSON());
 	//List<EventData> allEvents = Arrays.asList(new EventData("test1111"), new EventData("message111"));
